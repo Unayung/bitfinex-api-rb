@@ -86,5 +86,9 @@ module Bitfinex
     def credits(symbol = "fUSD")
       authenticated_post("auth/r/funding/credits/#{symbol}").body
     end
+
+    def credits_history(symbol = 'fUSD')
+      authenticated_post("auth/r/funding/credits/#{symbol}/hist").body
+    end
   end
 end
