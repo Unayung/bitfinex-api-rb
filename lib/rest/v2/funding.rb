@@ -83,6 +83,10 @@ module Bitfinex
       authenticated_post("auth/w/funding/auto", params: payload).body
     end
 
+    def loans(symbol = 'fUSD')
+      authenticated_post("auth/r/funding/loans/#{symbol}").body
+    end
+
     def credits(symbol = "fUSD")
       authenticated_post("auth/r/funding/credits/#{symbol}").body
     end
