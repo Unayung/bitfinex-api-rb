@@ -6,7 +6,7 @@ module Bitfinex
     # @example:
     #    client.offers
     def offers
-      authenticated_post("auth/r/offers").body
+      authenticated_post('auth/r/funding/offers').body
     end
 
     # Get account margin info
